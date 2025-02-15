@@ -21,7 +21,7 @@ function SetXO(element) {
             } else {
                 document.querySelector(".current-player").textContent = winner + " wins!";
             }
-            StartAgainBtn.style.display = "flex";
+            StartAgainBtn.style.visibility = "visible";
         }
     }
 }
@@ -58,7 +58,7 @@ document.querySelector(".x-o-boxes").addEventListener("click", function (event) 
     }
 });
 function ResetGame() {
-    StartAgainBtn.style.display = "none";
+    StartAgainBtn.style.visibility = "hidden";
     document.querySelector(".current-player").textContent = "X";
     const boxes = document.querySelectorAll(".x-o-boxes div");
     boxes.forEach(function(box) {
