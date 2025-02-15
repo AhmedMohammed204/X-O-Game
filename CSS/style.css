@@ -17,16 +17,14 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-.container
-{
-
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+.container {
+    max-width: 100%;
+    width: 400px; /* عرض افتراضي يمكن تغييره في الميديا كويري */
+    margin: 0 auto; /* يضمن التمركز */
+    padding: 15px;
     background-color: azure;
-
 }
+
 .x-o-boxes
 {
     display: grid;
@@ -73,8 +71,10 @@ html, body {
     border: none;
 }
 .start-again-container{
-    display: none;
+    visibility: hidden;
+    display: flex;
     justify-content: right;
+    align-items: center;
     margin-top: 20px;
     
 }
@@ -82,21 +82,18 @@ html, body {
 {
     background-color: #0056b3;
 }
-@media (min-width: 500px) {
+@media (max-width: 768px) {
     .container {
-        width: 400px;
+        width: 350px;
     }
     .current-player-box h2 {
-        font-size: 20px;
+        font-size: 15px;
     }
 }
-
-
 @media (min-width: 768px) {
     .container {
-        width: 700px;
+        width: 750px;
     }
-
 }
 @media (min-width: 992px) {
     .container {
